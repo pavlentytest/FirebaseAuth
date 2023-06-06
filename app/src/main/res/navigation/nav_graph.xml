@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/ChooserFragment"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/ChooserFragment"
+        android:name="ru.samsung.itschool.mdev.authfirebase.ChooserFragment"
+        tools:layout="@layout/fragment_chooser">
+        <action
+            android:id="@+id/action_emailpassword"
+            app:destination="@id/EmailPasswordFragment" />
+        <action
+            android:id="@+id/action_google"
+            app:destination="@id/GoogleSignInFragment" />
+        <action
+            android:id="@+id/action_phoneauth"
+            app:destination="@id/PhoneAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EmailPasswordFragment"
+        android:name="ru.samsung.itschool.mdev.authfirebase.EmailPasswordFragment"
+        tools:layout="@layout/fragment_email_password">
+    </fragment>
+    <fragment
+        android:id="@+id/GoogleSignInFragment"
+        android:name="ru.samsung.itschool.mdev.authfirebase.GoogleSignInFragment"
+        tools:layout="@layout/fragment_google_sign_in"/>
+    <fragment
+        android:id="@+id/PhoneAuthFragment"
+        android:name="ru.samsung.itschool.mdev.authfirebase.PhoneAuthFragment"
+        tools:layout="@layout/fragment_phone_auth"/>
+</navigation>
